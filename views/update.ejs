@@ -1,0 +1,18 @@
+<%- include('header'); -%>
+<form action="/updateblog" method="post">
+    <div class="input-group mb-3 input-group-lg">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Title</span>
+        </div>
+        <input type="text" class="form-control" name="title" placeholder="Blog Title" value="<%= utitle %>">
+    </div>
+    <div class="form-group">
+        <label for="comment">Blog Content:</label>
+        <textarea class="form-control" rows="5" name="content" placeholder="Blog Content"
+            id="comment"><%= ucontent %></textarea>
+    </div>
+    <button type="submit" name="update_blog" value="<%= uid %>" class="btn btn-info mx-auto">Update Post Now!!</button>
+    </div>
+    <!-- <button type="submit" class="btn btn-info mx-auto">Post Now!!</button> -->
+</form>
+<%- include('footer'); -%>
